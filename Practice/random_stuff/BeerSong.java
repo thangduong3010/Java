@@ -1,3 +1,4 @@
+package random_stuff;
 /* Practice loop, branching */
 public class BeerSong {
 	public static void main (String[] args){

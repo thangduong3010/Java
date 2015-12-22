@@ -1,3 +1,4 @@
+package random_stuff;
 // this is for training
 class banana {
 	public static void main(String args[]){

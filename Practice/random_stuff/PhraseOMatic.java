@@ -1,3 +1,4 @@
+package random_stuff;
 /* play with array */
 public class PhraseOMatic {
 	public static void main (String[] args){
