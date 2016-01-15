@@ -4,7 +4,7 @@ class Help {
 	public static void main (String args[]) 
 		throws java.io.IOException {
 		
-		char choice, ignore, again;
+		char choice, ignore, again = ' ';
 		
 		do {
 		
@@ -13,20 +13,25 @@ class Help {
 			System.out.println("\t2. switch");
 			System.out.println("\t3. for");
 			System.out.println("\t4. while");
-			System.out.println("\t5. do-while\n");
-			
+			System.out.println("\t5. do-while");
+			System.out.println("\t6. break");
+			System.out.println("\t7. continue\n");
+						
 			
 			do {
-				System.out.print("Choose one: ");
+				System.out.print("Choose one (q to quit): ");
 				choice = (char) System.in.read();
-		
 				do {
 					ignore = (char) System.in.read();
 				}
 				while (ignore != '\n');
 			}
-			while (choice < '1' | choice > '5');
+			while (choice < '1' | choice > '7' & choice != 'q');
 		
+			if (choice == 'q')
+				break;
+			System.out.println("\n");
+			
 			switch (choice) {
 				case '1':
 					System.out.println("The if:\n");
@@ -57,6 +62,16 @@ class Help {
 					System.out.println("\t\tstatement;");
 					System.out.println("} while (condition);");
 				break;
+				case '6':
+					System.out.println("The break:\n");
+					System.out.println("\tbreak;");
+					System.out.println("\tor break label;");
+					break;
+				case '7':
+					System.out.println("The continue:\n");
+					System.out.println("\tcontinue;");
+					System.out.println("\tor continue label;");
+					break;
 				default:
 					System.out.println("Selection not found.");
 			}
@@ -73,7 +88,9 @@ class Help {
 		}
 		while (again == 'Y');
 		
-		if (again == 'N')
+		if (again == 'N' || choice == 'q') {
+			System.out.println();
 			System.out.println("*** End of help ***");
+		}
 	}
 }
