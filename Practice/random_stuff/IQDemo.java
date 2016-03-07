@@ -1,4 +1,4 @@
-package random_stuff;
+/*package random_stuff;
 
 // a fixed-size queue
 class FixedQueue implements ICharQ {
@@ -153,4 +153,4 @@ class IQDemo {
 		}
 		System.out.println();
 	}
-}
+}*/
